@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: "JeronOkkers/girlfriend-blog" # e.g. "JeronOkkers/girlfriend-blog"
+  branch: "main"
+  accept_roles:
+    - admin
+
+# If you want Netlify CMS to publish immediately, remove publish_mode.
+publish_mode: editorial_workflow
+
+media_folder: "public/media"
+public_folder: "/media"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
