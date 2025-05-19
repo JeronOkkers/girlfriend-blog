@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: "JeronOkkers/girlfriend-blog" # e.g. "JeronOkkers/girlfriend-blog"
+  repo: "JeronOkkers/girlfriend-blog"
   branch: "main"
   accept_roles:
     - admin

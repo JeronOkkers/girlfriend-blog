@@ -16,7 +16,11 @@ export default function Home({ allPostsData }: HomeProps) {
         <ul>
           {allPostsData.map(({ slug, date, title }) => (
             <li key={slug} className="mb-4">
-              <Link href={`/posts/${slug}`} className="text-xl text-blue-600 hover:underline">
+              <Link
+                legacyBehavior
+                href={`/posts/${slug}`}
+                className="text-xl text-blue-600 hover:underline"
+              >
                 {title}
               </Link>
               <p className="text-gray-500 text-sm">Published on {date}</p>
