@@ -1,11 +1,14 @@
+# public/admin/config.yml
+
 backend:
   name: github
-  repo: "JeronOkkers/girlfriend-blog"
+  repo: "JeronOkkers/girlfriend-blog" # ← your GitHub "owner/repo"
   branch: "main"
-  accept_roles:
-    - admin
+  # Point Netlify CMS at our Vercel serverless function:
+  base_url: "https://girlfriend-blog.vercel.app"
+  auth_endpoint: "/api/auth" # triggers our `api/auth.ts`
 
-# If you want Netlify CMS to publish immediately, remove publish_mode.
+# If you want posts to appear immediately, remove publish_mode below:
 publish_mode: editorial_workflow
 
 media_folder: "public/media"
